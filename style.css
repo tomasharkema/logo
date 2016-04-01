@@ -1,4 +1,7 @@
 /* common */
+*{
+  box-sizing: border-box;
+}
 
 .q-green {
   color: #84bc2d;
@@ -10,38 +13,82 @@ body, select, input {
 }
 
 h1, h2, h3 {
-  font: bold italic 50px 'Playfair Display', sans-serif;
+  font: bold italic 50px 'Sansita One', cursive;
   color: #333;
 }
 
 body {
   margin: 0;
+  background-color: #84bc2d;
+}
+
+#page{
+  border 2px solid grey;
+  background-color: white;
 }
 
 /* page elements and styles */
 
-#logo {
-  margin: 100px auto;
-  width: 30vw;
-  height: 30vh;
+.navbar{
+  padding-top: 5px;
   display: block;
-  padding: 20px;
+  width: 100%;
+  height: 40px;
+  background-color: #84bc2d;
+}
+.navbar a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.icon{
+  height: 9px;
+  margin-right: 5px;
+}
+.icon-big{
+  height: 20px;
+  position: relative;
+  top:5px;
+}
+
+#hero{
+  display: flex;
+  margin-top: 100px;
+}
+
+q42-logo{
+  display: block;
+}
+
+.manifesto-container,
+.logo-container{
+  width: 100%;
 }
 
 section {
-  width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 42px 20px;
+}
+
+.navbar section{
+  padding: 0 20px;
 }
 
 h1 {
-  font-size: 48px;
-  margin: 2em 0 0 0;
+  font-size: 66px;
+  margin: 0;
 }
 
-h2 {
+h2{
+  font-size: 42px;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
   font-size: 24px;
-  margin: 2em 0 0 0;
+  margin: 0;
 }
 
 a {
@@ -49,34 +96,25 @@ a {
   text-decoration: none;
 }
 
+.right-aligned{
+  float: right;
+}
+
 .lhead {
   display: inline-block;
   width: 140px;
 }
 
-#manifesto h1,
-#manifesto p {
-  margin: 3em 0;
-  text-align: justify;
+.factsheet-wrapper{
+  width: 100%;
+  background-color: #000082;
 }
 
-#factsheet {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background: #000082;
+#factsheet{
   color: white;
 }
 
-#factsheet h1,
-#factsheet p {
-  width: 600px;
-  margin: 0 auto;
-  padding: 1em 0;
-  color: white;
-}
-
-#getit .copypaste {
+.copypaste {
   font: 16px monospace;
   width: 100%;
   color: #444;
@@ -85,15 +123,19 @@ a {
   padding: 1em
 }
 
-#getit .code {
+.code {
   background: #EEE;
   color: #333;
   font: bold 14px monospace;
   padding: 0.3em;
 }
 
-#getit .arrow {
+.arrow {
   padding: 0 0 0 4em;
+}
+
+.examples{
+  display: flex;
 }
 
 #codeplaceholder {
